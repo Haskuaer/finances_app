@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+    --color-text: oklch(0.85 0 0);
+    --color-bg: oklch(0.25 0 0);
+    --color-bgl: oklch(0.30 0 0);
+    --color-bgd: oklch(0.20 0 0);
+    --color-l2: oklch(0.85 0.02 133);
+    --color-l1: oklch(0.7 0.058 151);
+    --color-main: oklch(0.54 0.046 176);
+    --color-d1: oklch(0.4 0.032 205);
+    --color-d2: oklch(0.35 0.024 231);
+}
+
+@theme {
+    --color-text: var(--color-text);
+    --color-bg: var(--color-bg);
+    --color-bgl: var(--color-bg1);
+    --color-bgd: var(--color-bg2);
+    --color-main: var(--color-main);
+    --color-l1: var(--color-l1);
+    --color-l2: var(--color-l2);
+    --color-d1: var(--color-d1);
+    --color-d2: var(--color-d2);
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.nav-bar{
+    @apply px-6 py-4 flex items-center gap-2 bg-bg rounded-sm hover:bg-main;
+}
+
+.account-menu{
+    @apply px-4 py-2 block bg-bgd hover:bg-bgl;
+}
